@@ -4,7 +4,31 @@
 */
 
 function isPalindrome(str) {
+  str = str.toLowerCase();
+  let count = 0;
+  let len = str.length;
+  let str2 = "";
+
+  for (let i = 0; i < len; i++) {
+    if (str[i].toLowerCase() != str[i].toUpperCase()) {
+      str2 = str2 + str[i];
+    }
+  }
+
+  console.log(str2);
+
+  for (let i = 0; i < str2.length; i++) {
+    if (str2[i] == str2[str2.length - 1 - i]){
+      count++;
+    }
+  }
+
+  if (count != str2.length) {
+    return false;
+  }
   return true;
 }
 
+ let result = isPalindrome("race car");
+ console.log(result);
 module.exports = isPalindrome;
