@@ -15,8 +15,6 @@ function isPalindrome(str) {
     }
   }
 
-  console.log(str2);
-
   for (let i = 0; i < str2.length; i++) {
     if (str2[i] == str2[str2.length - 1 - i]){
       count++;
@@ -29,6 +27,3 @@ function isPalindrome(str) {
   return true;
 }
 
- let result = isPalindrome("race car");
- console.log(result);
-module.exports = isPalindrome;
