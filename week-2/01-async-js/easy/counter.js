@@ -3,6 +3,9 @@ let a = 0;
 function counter (){
 	console.log(a);
 	a++;
-}
+} 
 
-setInterval(counter, 1000);
+function count(){ 
+	counter();
+	setInterval(counter, 1000);
+}
